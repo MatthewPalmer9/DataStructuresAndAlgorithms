@@ -1,4 +1,3 @@
-const List = require("../List");
 const Stack = require("../stackStructure");
 
 describe('Stack', () => {
@@ -7,16 +6,15 @@ describe('Stack', () => {
     beforeEach(() => {
         stack = new Stack();
         stack.push("Jack");
-        stack.push("Steven")
+        stack.push("Steven");
     });
     
     it('should successfully push an element to the top of the stack', () => {
-        stack.push("James");
-        expect(list.dataStore[1]).toBe("James");
+        expect(stack.dataStore[0]).toBe("Jack");
     });
 
     it('should successfully peek at the element below the top of the stack', () => {
-        expect(stack.peek()).toBe("Jack");
+        expect(stack.peek()).toBe("Steven");
     });
 
     it('should successfully pop the top element from the stack', () => {
