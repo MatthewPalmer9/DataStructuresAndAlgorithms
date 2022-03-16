@@ -1,4 +1,4 @@
-export default function List() {
+module.exports = function List() {
     this.listSize = 0;
     this.pos = 0;
     this.dataStore = []; // initializes an empty array to store list elements

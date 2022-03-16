@@ -1,12 +1,13 @@
 {
   "type": "module",
   "scripts": {
-    "test": "mocha"
+    "test": "jest"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "verbose": true
   },
   "devDependencies": {
-    "mocha": "^9.2.2"
-  },
-  "dependencies": {
-    "chai": "^4.3.6"
+    "jest": "^27.5.1"
   }
 }
