@@ -56,7 +56,7 @@ export default function List() {
     };
 
     function toString() {
-        return this.dataStore;
+        return this.dataStore.toString();
     };
 
     function insert(element, after) {

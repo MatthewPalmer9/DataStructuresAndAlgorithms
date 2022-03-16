@@ -38,4 +38,8 @@ describe('List Class', () => {
     it('should return the length of the list using the length() method', () => {
         expect(list.length()).to.equal(3);
     });
+
+    it('should transform the list into a string using the .toString() method', () => {
+        expect(list.toString()).to.equal("a,b,c");
+    });
 });
