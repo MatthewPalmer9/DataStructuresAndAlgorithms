@@ -61,4 +61,19 @@ describe('List Class', () => {
     it('should return false if .contains() method does not find the element in the list', () => {
         expect(list.contains("x")).to.be.false;
     });
+
+    it('should bring our position back to the front of the list when using the .front() method', () => {
+        expect(list.currPos()).to.equal(0);
+        list.next();
+        list.next();
+        expect(list.currPos()).to.equal(2);
+        list.front();
+        expect(list.currPos()).to.equal(0);
+    });
+    
+    it('should bring our position to the back of the list when using the .end() method', () => {
+        expect(list.currPos()).to.equal(0);
+        list.end();
+        expect(list.currPos()).to.equal(2);
+    });
 });
