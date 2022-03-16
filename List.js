@@ -129,10 +129,3 @@ export default function List() {
         return -1;
     }
 }
-
-let list = new List();
-list.append("Matthew");
-console.log(list.length());
-console.log(list.toString());
-console.log(list.remove("Matthew"));
-console.log(list.toString());

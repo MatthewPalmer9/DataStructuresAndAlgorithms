@@ -93,4 +93,8 @@ describe('List Class', () => {
         list.moveTo(2);
         expect(list.currPos()).to.equal(2);
     });
+
+    it('should find the position using the .find(element) method', () => {
+        expect(list.find("b")).to.equal(1);
+    });
 });
