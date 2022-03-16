@@ -5,5 +5,5 @@ This repository uses [Jest](https://jestjs.io/) for the testing suite. Additiona
 
 ### Instructions for Running Tests
 - Begin by cloning down this repository.
-- Make sure to run `npm i` to install `node_modules/`.
+- Make sure to run `npm i` to install dependencies / `node_modules/`.
 - Finally, run `npm test` to run the test suite.
