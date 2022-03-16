@@ -97,4 +97,8 @@ describe('List Class', () => {
     it('should find the position using the .find(element) method', () => {
         expect(list.find("b")).to.equal(1);
     });
+
+    it('should get the list item in current position using the .getElement() method', () => {
+        expect(list.getElement()).to.equal("a");
+    });
 });
