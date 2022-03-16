@@ -76,4 +76,16 @@ describe('List Class', () => {
         list.end();
         expect(list.currPos()).to.equal(2);
     });
+
+    it('should increment the current position using the .next() method', () => {
+        list.next();
+        expect(list.currPos()).to.equal(1);
+    });
+
+    it('should decrement the current position using the .prev() method', () => {
+        list.next();
+        list.next();
+        list.prev();
+        expect(list.currPos()).to.equal(1);
+    });
 });
