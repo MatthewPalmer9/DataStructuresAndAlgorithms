@@ -17,6 +17,12 @@ describe('List Class', () => {
         list.append("d");
         expect(list.dataStore).to.contain("d");
     });
+    
+    it('should remove an element from the list using the remove() method', () => {
+        list.append("d");
+        expect(list.remove("d")).to.be.true;
+        expect(list.dataStore).to.eql(["a", "b", "c"]);
+    });
 
     it('should transform an array to a list using the to_list() method', () => {
         const list2 = new List().to_list([1,2,3]);
@@ -29,9 +35,7 @@ describe('List Class', () => {
         expect(list3.to_list(["a", "b", "c"]).to_a()).to.eql(["a", "b", "c"])
     });
 
-    it('should remove an element from the list using the remove() method', () => {
-        list.append("d");
-        expect(list.remove("d")).to.be.true;
-        expect(list.dataStore).to.eql(["a", "b", "c"]);
+    it('should return the length of the list using the length() method', () => {
+        expect(list.length()).to.equal(3);
     });
 });
