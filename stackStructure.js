@@ -5,6 +5,7 @@ module.exports = function Stack() {
     this.pop = pop;
     this.peek = peek;
     this.clear = clear;
+    this.length = length;
 
     function push(element) {
         // should push element to the top of the stack.
@@ -23,6 +24,7 @@ module.exports = function Stack() {
 
     function length() {
         // should return the value of top
+        return this.top;
     }
 
     function clear() {

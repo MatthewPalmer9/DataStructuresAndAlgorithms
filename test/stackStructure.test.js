@@ -21,6 +21,10 @@ describe('Stack', () => {
         expect(stack.pop()).toBe("Steven");
     });
 
+    it('should successfully return th length of the stack', () => {
+        expect(stack.length()).toBe(2);
+    });
+
     it('should successfully clear() the stack', () => {
         stack.clear();
         expect(stack.top).toBe(0);
