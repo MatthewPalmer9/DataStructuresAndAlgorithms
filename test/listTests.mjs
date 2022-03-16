@@ -88,4 +88,9 @@ describe('List Class', () => {
         list.prev();
         expect(list.currPos()).to.equal(1);
     });
+
+    it('should move our position in the list using the .moveTo() method', () => {
+        list.moveTo(2);
+        expect(list.currPos()).to.equal(2);
+    });
 });
