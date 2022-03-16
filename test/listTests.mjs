@@ -28,4 +28,10 @@ describe('List Class', () => {
         expect(list3.to_list([]).to_a()).to.eql([]);
         expect(list3.to_list(["a", "b", "c"]).to_a()).to.eql(["a", "b", "c"])
     });
+
+    it('should remove an element from the list using the remove() method', () => {
+        list.append("d");
+        expect(list.remove("d")).to.be.true;
+        expect(list.dataStore).to.eql(["a", "b", "c"]);
+    });
 });
