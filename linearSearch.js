@@ -1,4 +1,4 @@
-const numArr = {
+module.exports = numArr = {
     0: 5, 1: 26, 2: 45, 3: 91, 4: 117, 5: 161, 6: 178, 
     7: 201, 8: 245, 9: 293, 10: 320, 11: 341, 12: 384, 13: 412, 
     14: 417, 15: 502, 16: 561, 17: 648, 18: 662, 19: 675, 20: 723, 
@@ -6,7 +6,7 @@ const numArr = {
     28: 887, 29: 955, 30: 987, 31: 998
 };
 
-export default function linearSearch(listData, value) {
+module.exports = function linearSearch(listData, value) {
     let index = 0;
     if(typeof value != 'number') { 
         return false; 
@@ -20,6 +20,4 @@ export default function linearSearch(listData, value) {
     };
 
     return listData[index];
-}
-
-linearSearch(numArr, "44");
+};

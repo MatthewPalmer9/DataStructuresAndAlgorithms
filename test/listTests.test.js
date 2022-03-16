@@ -1,7 +1,4 @@
-// import chai, { expect } from 'chai';
-const List = require('../List.js');
-
-// chai.should();
+const List = require("../List.js");
 
 describe('List Class', () => {
     let list;
