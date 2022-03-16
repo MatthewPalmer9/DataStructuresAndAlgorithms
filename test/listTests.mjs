@@ -42,4 +42,9 @@ describe('List Class', () => {
     it('should transform the list into a string using the .toString() method', () => {
         expect(list.toString()).to.equal("a,b,c");
     });
+
+    it('should insert an element to a specific place in the list', () => {
+        expect(list.insert("d", "b")).to.be.true;
+        expect(list.dataStore).to.eql(["a", "b", "d", "c"]);
+    });
 });
