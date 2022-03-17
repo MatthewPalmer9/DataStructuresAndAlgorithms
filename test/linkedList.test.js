@@ -20,4 +20,9 @@ describe('LinkedList', () => {
     it('should return the node behind the queried item', () => {
         expect(list.findPrevious("Steven")).toEqual(list.find("James"));
     });
+
+    it('should remove a node from the list', () => {
+        list.remove("Steven");
+        expect(list.find("James").next).toBe(null);
+    });
 });

@@ -34,15 +34,19 @@ module.exports = function LList() {
     function findPrevious(item) {
         // should return the node behind the queried item
         let currNode = this.head;
-        while(!(currNode.next == null) && (currNode.next.element != item)) { // while currNode is not null & currNode element is not the 
-            currNode = currNode.next;                                           // item we are looking for.
+        while(!(currNode.next == null) && (currNode.next.element != item)) { // while currNode is not null & currNode.next.element is not the 
+            currNode = currNode.next;                                        // item we are looking for.
         }
         return currNode;
     }
 
     function remove(item) {
         // should remove a node from our list
-    }
+        let prevNode = this.findPrevious(item);
+        if(!(prevNode.next == null)) { // if the element behind this item points back to it (exists)...
+            prevNode.next = prevNode.next.next; // tell previous node to forget about me and point to the node after me
+        };
+    };
 
     /**
      * HELPERS
