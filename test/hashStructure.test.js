@@ -7,7 +7,7 @@ describe('Hash Table', () => {
         hashTable = new HashTable();
     });
 
-    it('should return the has value of passed in data', () => {
+    it('should return the hash value of passed in data', () => {
 
     });
 
@@ -16,6 +16,6 @@ describe('Hash Table', () => {
     });
 
     it('should return each table in the Hash Table', () => {
-        
+
     });
 });

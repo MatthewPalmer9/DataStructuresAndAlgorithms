@@ -6,7 +6,7 @@ module.exports = function HashTable() {
     // this.get = get;
 
     function hash(data) {
-        // should return the has value of passed in data
+        // should return the hash value of passed in data
     }
 
     function put(data) {
