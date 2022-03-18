@@ -4,20 +4,41 @@ module.exports = function Dictionary() {
     this.find = find;
     this.remove = remove;
     this.showAll = showAll;
+    this.count = count;
+    this.clear = clear;
 
     function add(key, value) {
-        // should successfully add a key/value pair to the dictionary
+        this.dataStore[key] = value;
     }
 
     function find(key) {
-        // should successfully find a value by its key
+        return this.dataStore[key];
     }
 
     function remove(key) {
-        // should successfully remove a value by its key
+        delete this.dataStore[key];
     }
 
     function showAll () {
-        // should show all items in the dictionary
+        let str = "";
+        for(key of Object.keys(this.dataStore).sort()) {
+            str.length == 0 ?
+            str += (key + ": " + this.dataStore[key]) : str += (", " + key + ": " + this.dataStore[key]); 
+        }
+        return str;
     }
-}
+
+    function count() {
+        let n = 0;
+        for(key of Object.keys(this.dataStore)) {
+            n++;
+        };
+        return n;
+    };
+
+    function clear() {
+        for(key of Object.keys(this.dataStore)) {
+            delete this.dataStore[key];
+        };
+    };
+};
